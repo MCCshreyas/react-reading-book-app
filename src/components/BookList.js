@@ -3,8 +3,8 @@ import { BookContext } from "../contexts/BookContext";
 import { BookDetails } from "./BookDetails";
 
 export const BookList = () => {
-  const { books, getBookCount } = useContext(BookContext);
-  return getBookCount() ? (
+  const { books } = useContext(BookContext);
+  return books.length ? (
     <div className="book-list">
       <ul>
         {books.map((book) => {
